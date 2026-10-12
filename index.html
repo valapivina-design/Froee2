@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* One-time, reversible language redirect: visitors on the English
+   home page are sent to their language folder (/de/, /es/, /it/).
+   SEO-safe: canonical + hreflang stay intact so each URL indexes on its own;
+   Googlebot (en) is not redirected; a manual language choice is remembered
+   and always wins. */
+(function(){try{
+  var p=location.pathname;
+  if(p!=="/"&&p!=="/index.html"&&p!=="/index.htm")return;
+  if(localStorage.getItem("fsg_lang"))return;
+  /* Never redirect search-engine crawlers or social/link scrapers. */
+  if(/bot|crawl|spider|slurp|mediapartners|google|bing|duckduck|baidu|yandex|sogou|facebookexternalhit|facebot|embedly|quora|pinterest|redditbot|slackbot|whatsapp|telegrambot|twitterbot|linkedinbot|applebot|petalbot|ia_archiver/i.test(navigator.userAgent))return;
+  var l=(navigator.languages&&navigator.languages[0])||navigator.language||"";
+  if(/^de/i.test(l)){localStorage.setItem("fsg_lang","de");location.replace("/de/");}
+  else if(/^es/i.test(l)){localStorage.setItem("fsg_lang","es");location.replace("/es/");}
+  else if(/^it/i.test(l)){localStorage.setItem("fsg_lang","it");location.replace("/it/");}
+}catch(e){}})();
+</script>
+<title>Forensics Source Group | Cybersecurity, Incident Response &amp; Digital Forensics</title>
+<meta name="description" content="Forensics Source Group provides cybersecurity, incident response, breach investigation, authorized penetration testing and court-admissible digital forensics for businesses, legal teams and individuals. Serving the US, UK, EU and Germany.">
+<meta name="keywords" content="Forensic Source Group, cybersecurity, incident response, digital forensics, cyber incident investigation, breach investigation, penetration testing, data recovery, spyware checks, stalkerware checks, chain of custody, court-admissible evidence, expert-witness reporting, e-Discovery, for businesses, for legal teams, for individuals, hire a hacker, hire a hacker for WhatsApp, hire a hacker for cell phone, hire a hacker for iPhone, hire a hacker for Android, hire a hacker for Instagram, hire a hacker to catch cheating spouse, US, UK, EU, Germany">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Forensics Source Group">
+<link rel="canonical" href="https://forensicsourcegroup.com/">
+
+<link rel="alternate" hreflang="en" href="https://forensicsourcegroup.com/">
+<link rel="alternate" hreflang="de" href="https://forensicsourcegroup.com/de/">
+<link rel="alternate" hreflang="es" href="https://forensicsourcegroup.com/es/">
+<link rel="alternate" hreflang="it" href="https://forensicsourcegroup.com/it/">
+<link rel="alternate" hreflang="x-default" href="https://forensicsourcegroup.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Forensics Source Group">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:title" content="Forensics Source Group | Cybersecurity &amp; Digital Forensics">
+<meta property="og:description" content="Incident response, breach investigation, penetration testing and court-admissible digital forensics for businesses, legal teams and individuals.">
+<meta property="og:url" content="https://forensicsourcegroup.com/">
+<meta property="og:image" content="https://forensicsourcegroup.com/images/og-image.svg">
+<meta property="og:image:alt" content="Forensics Source Group — Cybersecurity, Incident Response and Digital Forensics">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Forensics Source Group | Cybersecurity &amp; Digital Forensics">
+<meta name="twitter:description" content="Incident response, breach investigation, penetration testing and court-admissible digital forensics.">
+<meta name="twitter:image" content="https://forensicsourcegroup.com/images/og-image.svg">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="apple-touch-icon" href="images/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Forensics Source Group",
+  "url": "https://forensicsourcegroup.com/",
+  "logo": "https://forensicsourcegroup.com/images/logo.svg",
+  "image": "https://forensicsourcegroup.com/images/og-image.svg",
+  "description": "Cybersecurity, incident response, breach investigation, authorized penetration testing and court-admissible digital forensics for businesses, legal teams and individuals.",
+  "email": "info@forensicsourcegroup.com",
+  "telephone": "+1-737-381-5959",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5615 Concord Pike",
+    "addressLocality": "Wilmington",
+    "addressRegion": "DE",
+    "postalCode": "19803",
+    "addressCountry": "US"
+  },
+  "areaServed": ["US", "GB", "EU", "DE"],
+  "knowsLanguage": ["en", "de", "es", "it"],
+  "serviceType": ["Incident Response","Breach Investigation","Digital Forensics","Penetration Testing","Data Recovery","Security Consulting"]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="topbar">
+    <div class="container">
+      <a href="#contact">Support</a>
+      <a href="#process">How we work</a>
+      <div class="lang" aria-label="Language">
+        <a href="/" class="active" lang="en" hreflang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a href="/de/" lang="de" hreflang="de">DE</a>
+        <span aria-hidden="true">/</span>
+        <a href="/es/" lang="es" hreflang="es">ES</a>
+        <span aria-hidden="true">/</span>
+        <a href="/it/" lang="it" hreflang="it">IT</a>
+      </div>
+    </div>
+  </div>
+  <div class="mainbar">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Forensics Source Group home">
+        <span class="wm">Forensics<br>Source<br>Group<sup>&#174;</sup></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="/scam-investigation/">Scam investigation</a>
+        <a href="/hire-a-hacker/">Hire a Hacker</a>
+        <a href="/broker-review/">Broker review</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#who">Who we help</a>
+        <a href="#process">How we work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-orange" href="#contact">Request a consultation</a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+          <svg width="26" height="26" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <h1>Investigate, contain and recover from cyber incidents — with evidence that holds up.</h1>
+        <p class="lead">Forensics Source Group helps businesses, legal teams and individuals respond to breaches, uncover what happened, and strengthen their defences. Every investigation follows a strict chain of custody so the findings stand up in court.</p>
+        <div class="hero-badges">
+          <div><strong>24/7</strong>Incident response</div>
+          <div><strong>Court-ready</strong>Chain of custody</div>
+          <div><strong>EN &amp; DE</strong>US · UK · EU · Germany</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES (bordered cards) -->
+  <section id="capabilities">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Why Forensics Source Group</span>
+        <h2>See the full picture of an incident</h2>
+        <p>Technical depth and legal rigour in one team — so you understand what happened, prove it, and prevent it happening again.</p>
+      </div>
+      <div class="cards">
+        <article class="bcard">
+          <h3>See the broad picture of security incidents</h3>
+          <p>Combine every relevant data source into one case — endpoints, servers, mobile devices and cloud — for a comprehensive, defensible view of what occurred.</p>
+        </article>
+        <article class="bcard">
+          <h3>Streamline investigations for a faster response</h3>
+          <p>Targeted, remote-capable collection gathers only the data that matters, so we contain the threat and get you operating again sooner.</p>
+        </article>
+        <article class="bcard">
+          <h3>Evidence that stands up in court</h3>
+          <p>Strict chain-of-custody handling and clear expert reporting mean findings hold up in civil or criminal proceedings.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (feature rows) -->
+  <section id="services" class="band-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">What we do</span>
+        <h2>Cybersecurity services</h2>
+        <p>Authorized, legally sound and evidence-driven. We work only on systems, devices and accounts our clients own or are legally entitled to examine.</p>
+      </div>
+      <div class="rows">
+
+        <div class="frow">
+          <div class="ic"><img src="images/icon-incident.svg" alt=""></div>
+          <div>
+            <h3>Incident response</h3>
+            <p>Rapid containment when you're under attack. We isolate the threat, stop the damage and restore normal operations — with responders available around the clock.</p>
+            <ul class="tags"><li>24/7 emergency triage</li><li>Containment &amp; eradication</li><li>Recovery &amp; hardening</li></ul>
+          </div>
+        </div>
+
+        <div class="frow">
+          <div class="ic"><img src="images/icon-forensics.svg" alt=""></div>
+          <div>
+            <h3>Digital forensics</h3>
+            <p>Court-admissible forensic analysis of computers, servers, mobile devices and cloud accounts you own or are authorized to examine — with reporting your legal team can rely on.</p>
+            <ul class="tags"><li>Strict chain of custody</li><li>Expert-witness reporting</li><li>e-Discovery support</li></ul>
+          </div>
+        </div>
+
+        <div class="frow">
+          <div class="ic"><img src="images/icon-consulting.svg" alt=""></div>
+          <div>
+            <h3>Breach investigation</h3>
+            <p>After an intrusion we trace the attacker's footprint, scope the data affected and document exactly what happened — producing reports ready for regulators and insurers.</p>
+            <ul class="tags"><li>Root-cause analysis</li><li>Scope &amp; impact assessment</li><li>Regulatory-ready reports</li></ul>
+          </div>
+        </div>
+
+        <div class="frow">
+          <div class="ic"><img src="images/icon-pentest.svg" alt=""></div>
+          <div>
+            <h3>Penetration testing</h3>
+            <p>Authorized security assessments that find weaknesses before attackers do — conducted with your written permission and delivered as prioritized, fixable findings.</p>
+            <ul class="tags"><li>Network &amp; web app testing</li><li>Prioritized findings</li><li>Re-test after remediation</li></ul>
+          </div>
+        </div>
+
+        <div class="frow">
+          <div class="ic"><img src="images/icon-recovery.svg" alt=""></div>
+          <div>
+            <h3>Data recovery</h3>
+            <p>Recover your own lost or corrupted data from failed drives, damaged devices and cloud backups, using non-destructive methods that preserve the original evidence.</p>
+            <ul class="tags"><li>HDD, SSD &amp; RAID</li><li>Mobile &amp; cloud backups</li><li>Non-destructive methods</li></ul>
+          </div>
+        </div>
+
+        <div class="frow">
+          <div class="ic"><img src="images/icon-spyware.svg" alt=""></div>
+          <div>
+            <h3>Spyware &amp; stalkerware checks</h3>
+            <p>Worried your own phone or laptop is being monitored? We inspect the devices you own for hidden surveillance software and help you clean up and stay secure.</p>
+            <ul class="tags"><li>Device compromise assessment</li><li>Stalkerware detection</li><li>Clean-up advice</li></ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCAM INVESTIGATION TEASER -->
+  <section class="band">
+    <div class="container">
+      <div class="section-head">
+        <h2>Scammed online? We build the evidence.</h2>
+        <p>Technology-led investigation of crypto, forex, e-commerce and romance scams — asset tracing, blockchain and identity analysis, compiled into a court-ready dossier.</p>
+      </div>
+      <div class="teaser-tags">
+        <span>Crypto scams</span><span>Forex &amp; CFD</span><span>Fake shops</span><span>Romance / WhatsApp</span><span>Wise · Revolut tracing</span>
+      </div>
+      <a class="btn btn-blue" href="/scam-investigation/">Explore scam investigation</a>
+    </div>
+  </section>
+
+  <!-- HIRE A HACKER TEASER -->
+  <section class="band" style="background: linear-gradient(135deg, rgba(255,107,53,0.08) 0%, rgba(26,26,46,0) 100%);">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Digital Investigation</span>
+        <h2>Need to hire a hacker?</h2>
+        <p>WhatsApp tracing, iPhone &amp; Android forensics, Instagram investigation, and infidelity cases. Elite cyber experts with court-ready evidence.</p>
+      </div>
+      <div class="teaser-tags">
+        <span>WhatsApp IP tracing</span><span>iPhone forensics</span><span>Android data mining</span><span>Instagram investigation</span><span>Catch cheating spouse</span>
+      </div>
+      <a class="btn btn-orange" href="/hire-a-hacker/">Hire a Hacker</a>
+    </div>
+  </section>
+
+  <!-- WHO WE HELP -->
+  <section id="who">
+    <div class="container">
+      <div class="section-head center">
+        <span class="kicker">Who we help</span>
+        <h2>Trusted by organisations and individuals alike</h2>
+        <p>Whether you're a company, a legal team or a private individual, we bring the same technical rigour and confidentiality to your case.</p>
+      </div>
+      <div class="who">
+        <div class="item">
+          <h3>Businesses</h3>
+          <p>Contain breaches, investigate insider incidents and meet regulatory obligations with defensible, well-documented evidence.</p>
+        </div>
+        <div class="item">
+          <h3>Legal teams</h3>
+          <p>Court-admissible forensics, expert-witness reporting and e-Discovery support for civil and criminal matters.</p>
+        </div>
+        <div class="item">
+          <h3>Individuals</h3>
+          <p>Recover lost data, check your own devices for spyware, and get clear answers when something isn't right — handled discreetly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="band-soft">
+    <div class="container">
+      <div class="section-head center">
+        <span class="kicker">How we work</span>
+        <h2>A clear, defensible process</h2>
+        <p>From first call to final report, every step is documented so the outcome is reliable and legally sound.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Scope &amp; authorize</h3><p>We confirm what you own or are authorized to examine and agree a written engagement.</p></div>
+        <div class="step"><div class="n">2</div><h3>Preserve</h3><p>We capture evidence with a verifiable chain of custody so nothing is altered.</p></div>
+        <div class="step"><div class="n">3</div><h3>Analyze</h3><p>Certified examiners reconstruct events and identify root cause and impact.</p></div>
+        <div class="step"><div class="n">4</div><h3>Report &amp; remediate</h3><p>You get a clear report — plus practical steps to recover and prevent recurrence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip" style="padding:0">
+    <div class="container">
+      <div>
+        <h2>Under attack right now?</h2>
+        <p>Our incident-response team can begin triage immediately. Don't power anything off before you speak to us — you could destroy evidence.</p>
+      </div>
+      <a class="btn btn-orange" href="#contact">Talk to a responder</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="kicker">Contact</span>
+        <h2>Request a confidential consultation</h2>
+        <p>Tell us what's happening. We'll respond within one business day — or immediately for active incidents.</p>
+        <div class="item">
+          <svg width="24" height="24" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+          <div><strong>Email</strong><span><a href="mailto:info@forensicsourcegroup.com">info@forensicsourcegroup.com</a></span></div>
+        </div>
+        <div class="item">
+          <svg width="24" height="24" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+          <div><strong>Phone &amp; WhatsApp</strong><span><a href="tel:+17373815959">+1&nbsp;737&nbsp;381&nbsp;5959</a> · <a href="https://wa.me/17373815959" target="_blank" rel="noopener">WhatsApp</a><br>24/7 for active incidents</span></div>
+        </div>
+        <div class="item">
+          <svg width="24" height="24" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><strong>Office</strong><span>5615 Concord Pike, Wilmington, Delaware 19803, USA</span></div>
+        </div>
+        <div class="item">
+          <svg width="24" height="24" fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>
+          <div><strong>Coverage</strong><span>United States · United Kingdom · European Union · Germany</span></div>
+        </div>
+      </div>
+
+      <!-- Formcarry: replace YOUR_FORM_ID with your endpoint from https://formcarry.com -->
+      <form id="contactForm" class="cta-form" action="https://formcarry.com/s/F__X8iSA1z8" method="POST"
+            data-ok="Thanks — your message has been sent. We'll reply within one business day."
+            data-err="Something went wrong. Please email info@forensicsourcegroup.com."
+            data-sending="Sending…">
+        <div class="row2">
+          <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="company">Company / organisation (optional)</label><input id="company" name="company" type="text" autocomplete="organization"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field">
+          <label for="service">How can we help?</label>
+          <select id="service" name="service">
+            <option value="">Select a service…</option>
+            <option>Incident response (active attack)</option>
+            <option>Breach investigation</option>
+            <option>Digital forensics / expert witness</option>
+            <option>Penetration testing / security assessment</option>
+            <option>Data recovery</option>
+            <option>Spyware / stalkerware check (my own device)</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Briefly describe your situation. Do not include passwords or sensitive data here." required></textarea>
+        </div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="New enquiry — Forensics Source Group website">
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>I consent to Forensics Source Group contacting me about my enquiry. See our privacy policy.</span>
+        </label>
+        <div style="margin-top:18px"><button type="submit" class="btn btn-blue" style="width:100%">Send message</button></div>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+        <p class="form-note">We treat every enquiry as confidential. Please don't send passwords or sensitive evidence by email or web form.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="wm">Forensics Source Group<sup>&#174;</sup></span>
+      <p>Cybersecurity, incident response and court-admissible digital forensics for businesses, legal teams and individuals.</p>
+      <p style="margin-top:14px">5615 Concord Pike, Wilmington, Delaware 19803, USA<br>
+      <a href="tel:+17373815959">+1&nbsp;737&nbsp;381&nbsp;5959</a> (WhatsApp) · <a href="mailto:info@forensicsourcegroup.com">info@forensicsourcegroup.com</a></p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/hire-a-hacker/">Hire a Hacker</a></li>
+        <li><a href="/broker-review/">Broker review</a></li>
+        <li><a href="#services">Incident response</a></li>
+        <li><a href="#services">Breach investigation</a></li>
+        <li><a href="#services">Digital forensics</a></li>
+        <li><a href="#services">Penetration testing</a></li>
+        <li><a href="#services">Data recovery</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#who">Who we help</a></li>
+        <li><a href="#process">How we work</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/de/" hreflang="de">Deutsch</a></li>
+        <li><a href="/es/" hreflang="es">Español</a></li>
+        <li><a href="/it/" hreflang="it">Italiano</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="yr">2026</span> Forensics Source Group&#174;. All rights reserved.</span>
+    <span>United States · United Kingdom · European Union · Germany</span>
+  </div>
+</footer>
+<div class="footer-legal">
+  Forensics Source Group operates lawfully and only on systems, devices and accounts our clients own or are legally authorized to examine.
+</div>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="js/form.js"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a8db5b1dcccab344b66db76/1k0sorfai';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

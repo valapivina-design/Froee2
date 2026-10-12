@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Digital security shield illustration">
+  <defs>
+    <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#143cd6"/>
+      <stop offset="1" stop-color="#1430a8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="240" cy="240" r="220" fill="#143cd6" fill-opacity="0.05"/>
+  <circle cx="240" cy="240" r="168" fill="none" stroke="#143cd6" stroke-opacity="0.14" stroke-width="2" stroke-dasharray="4 8"/>
+  <!-- network nodes -->
+  <g stroke="#143cd6" stroke-opacity="0.25" stroke-width="2">
+    <line x1="90" y1="120" x2="240" y2="240"/>
+    <line x1="390" y1="120" x2="240" y2="240"/>
+    <line x1="90" y1="360" x2="240" y2="240"/>
+    <line x1="390" y1="360" x2="240" y2="240"/>
+  </g>
+  <g fill="#143cd6" fill-opacity="0.55">
+    <circle cx="90" cy="120" r="7"/><circle cx="390" cy="120" r="7"/>
+    <circle cx="90" cy="360" r="7"/><circle cx="390" cy="360" r="7"/>
+  </g>
+  <!-- shield -->
+  <path d="M240 96 L340 136 V250 C340 330 296 372 240 400 C184 372 140 330 140 250 V136 Z" fill="url(#sg)"/>
+  <path d="M240 96 L340 136 V250 C340 330 296 372 240 400 C184 372 140 330 140 250 V136 Z" fill="none" stroke="#0e1524" stroke-opacity="0.15" stroke-width="3"/>
+  <!-- keyhole -->
+  <circle cx="240" cy="228" r="26" fill="#fff"/>
+  <rect x="230" y="244" width="20" height="46" rx="8" fill="#fff"/>
+  <!-- check -->
+  <path d="M206 300 l24 26 52 -64" fill="none" stroke="#9db0ff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
