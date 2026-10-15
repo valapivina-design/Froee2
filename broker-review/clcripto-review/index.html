@@ -29,6 +29,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/styles.css">
 <link rel="stylesheet" href="../../css/popup.css">
+<link rel="stylesheet" href="../../css/comments.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -276,6 +277,39 @@
       </div>
     </div>
   </section>
+  <!-- CLIENT COMMENTS -->
+  <section class="cm-section" id="comments" data-slug="clcripto-review" data-broker="CL Cripto">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Verified client feedback</span>
+        <h2>Client comments</h2>
+        <p class="cm-honesty">Comments are moderated. We only publish comments from verified clients.</p>
+      </div>
+      <div id="cmList" class="cm-list" aria-live="polite"></div>
+      <form id="cmForm" class="cm-form" action="https://formcarry.com/s/F__X8iSA1z8" method="POST">
+        <div class="row2">
+          <div class="field"><label for="cmName">Name</label><input id="cmName" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="cmEmail">Email</label><input id="cmEmail" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field">
+          <label for="cmText">Comment</label>
+          <textarea id="cmText" name="comment" maxlength="1000" required></textarea>
+          <span class="cm-count"><span id="cmCount">0</span> / 1000</span>
+        </div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Comment — CL Cripto">
+        <input type="hidden" name="page_slug" value="clcripto-review">
+        <input type="hidden" name="submitted_at" id="cmSubmittedAt" value="">
+        <div style="margin-top:18px"><button type="submit" class="btn btn-blue" id="cmSubmit">Submit comment for moderation</button></div>
+        <div id="cmStatus" class="form-status" role="status" aria-live="polite"></div>
+        <p class="form-note">Your email is never published. Comments appear only after moderation by our team.</p>
+      </form>
+      <div id="cmThanks" class="cm-thanks" hidden>
+        <p>Thank you. Your comment has been submitted for moderation and will appear after review.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-strip" style="padding:0">
     <div class="container">
@@ -461,5 +495,7 @@ s0.parentNode.insertBefore(s1,s0);
 </div>
 <script src="../../js/popup.js" defer></script>
 
+<script src="../../js/comments-data.js" defer></script>
+<script src="../../js/comments.js" defer></script>
 </body>
 </html>

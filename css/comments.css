@@ -1,0 +1,25 @@
+/* Client comments — shared styles for all review pages.
+   Uses the site design tokens from css/styles.css. */
+
+.cm-section{background:var(--blue-soft);border-top:1px solid var(--blue-border);border-bottom:1px solid var(--blue-border);padding:56px 0}
+.cm-section .section-head{margin-bottom:28px}
+.cm-honesty{font-size:14px;color:var(--muted);margin:8px 0 0}
+
+.cm-list{margin-bottom:32px}
+.cm-item{background:#fff;border:1.5px solid var(--blue-border);padding:20px 22px;margin-bottom:14px}
+.cm-item header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:8px}
+.cm-name{font-weight:800;color:var(--ink)}
+.cm-date{font-size:13px;color:var(--muted)}
+.cm-item p{margin:0;color:var(--muted);white-space:pre-wrap;overflow-wrap:break-word}
+.cm-empty{font-size:14px;color:var(--muted);margin:0}
+
+.cm-form{background:#fff;border:1.5px solid var(--blue-border);padding:30px}
+.cm-form textarea{max-height:320px}
+.cm-count{display:block;text-align:right;font-size:12px;color:var(--muted);margin-top:4px}
+.cm-thanks{background:#fff;border:1.5px solid var(--blue-border);padding:30px}
+.cm-thanks p{margin:0;font-weight:600;color:#12633b}
+
+@media (max-width:640px){
+  .cm-form{padding:20px}
+  .cm-thanks{padding:20px}
+}
