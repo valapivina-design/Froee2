@@ -21,7 +21,7 @@
       msg=form.querySelector('#sgMsg');
   if(h2em) h2em.textContent=broker;
   if(subject) subject.value='Scam Alert popup — '+broker+' review page';
-  if(msg) msg.value='I lost money to '+broker+' and want a free case review.';
+  if(msg) msg.value='I used '+broker+'. Date I paid: . How I paid: . Person who told me to pay: .';
   wrap.removeAttribute('hidden');
 
   var h1=document.querySelector('h1');
@@ -60,13 +60,13 @@
     status.className='sg-status'; status.textContent='';
     /* require country code: number must start with "+" */
     var phoneEl=document.getElementById('sgPhone');
-    if(phoneEl){
+    if(phoneEl && phoneEl.value.trim()){
       var pv=phoneEl.value.replace(/[\s()-]/g,'');
       if(!/^\+\d{6,15}$/.test(pv)){
         phoneEl.classList.add('sg-invalid');
         phoneEl.focus();
         status.className='sg-status err';
-        status.textContent='Please add your country code — start with “+”, e.g. +44 7700 900000.';
+        status.textContent='Add the country code — start with “+”, e.g. +1 or +44.';
         return;
       }
       phoneEl.value=pv; phoneEl.classList.remove('sg-invalid');
@@ -79,6 +79,6 @@
         else{throw 0;}
       })
       .catch(function(){status.className='sg-status err';status.textContent='Something went wrong — please email info@forensicsourcegroup.com.';})
-      .finally(function(){btn.disabled=false;btn.textContent='Start my free case review';});
+      .finally(function(){btn.disabled=false;btn.textContent='Send the missing records';});
   });
 })();
