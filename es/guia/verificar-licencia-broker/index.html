@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verificar licencia bróker: CNMV, CySEC, FCA y CONSOB | Forensics Source Group</title>
+<meta name="description" content="Verificar licencia bróker en minutos: CNMV, CySEC, FCA y CONSOB paso a paso, más la lista de señales de estafa bróker si la verificación falla.">
+<meta name="keywords" content="verificar licencia bróker, cómo saber si un broker es confiable, señales de estafa bróker, registro CNMV intermediarios">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Forensics Source Group">
+<link rel="canonical" href="https://forensicsourcegroup.com/es/guia/verificar-licencia-broker/">
+<link rel="alternate" hreflang="es" href="https://forensicsourcegroup.com/es/guia/verificar-licencia-broker/">
+<link rel="alternate" hreflang="x-default" href="https://forensicsourcegroup.com/es/guia/verificar-licencia-broker/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Forensics Source Group">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Verificar licencia bróker: CNMV, CySEC, FCA y CONSOB | Forensics Source Group">
+<meta property="og:description" content="Verificar licencia bróker en minutos: CNMV, CySEC, FCA y CONSOB paso a paso, más la lista de señales de estafa bróker si la verificación falla.">
+<meta property="og:url" content="https://forensicsourcegroup.com/es/guia/verificar-licencia-broker/">
+<meta property="og:image" content="https://forensicsourcegroup.com/images/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verificar licencia bróker: CNMV, CySEC, FCA y CONSOB | Forensics Source Group">
+<meta name="twitter:description" content="Verificar licencia bróker en minutos: CNMV, CySEC, FCA y CONSOB paso a paso, más la lista de señales de estafa bróker si la verificación falla.">
+<meta name="twitter:image" content="https://forensicsourcegroup.com/images/og-image.svg">
+<link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+<link rel="apple-touch-icon" href="../../../images/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../css/styles.css">
+<link rel="stylesheet" href="../../../css/popup.css">
+<link rel="stylesheet" href="../../../css/comments.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://forensicsourcegroup.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://forensicsourcegroup.com/es/guia/"},
+        {"@type": "ListItem", "position": 3, "name": "Verificar licencia bróker: la verificación de 5 minutos paso a paso", "item": "https://forensicsourcegroup.com/es/guia/verificar-licencia-broker/"}
+    ]},
+    {"@type": "Article",
+     "headline": "Verificar licencia bróker: CNMV, CySEC, FCA y CONSOB",
+     "description": "Verificar licencia bróker en minutos: CNMV, CySEC, FCA y CONSOB paso a paso, más la lista de señales de estafa bróker si la verificación falla.",
+     "inLanguage": "es",
+     "datePublished": "2026-10-10",
+     "dateModified": "2026-10-10",
+     "author": {"@type": "Organization", "name": "Forensics Source Group", "url": "https://forensicsourcegroup.com/"},
+     "publisher": {"@type": "Organization", "name": "Forensics Source Group", "url": "https://forensicsourcegroup.com/"},
+     "mainEntityOfPage": {"@type": "WebPage", "@id": "https://forensicsourcegroup.comes/guia/verificar-licencia-broker/"}},
+    {"@type": "FAQPage", "mainEntity": [
+      {"@type": "Question",
+       "name": "¿Qué registro debo comprobar?",
+       "acceptedAnswer": {"@type": "Answer", "text": "El registro del regulador donde el bróker declara su licencia: CNMV para España, CySEC para Chipre, FCA para Reino Unido, CONSOB para Italia, BaFin para Alemania. Si el bróker declara 'regulación europea', verifique la entidad exacta y el país — el pasaporte europeo es real, pero los clones abusan de la palabra."}},
+      {"@type": "Question",
+       "name": "¿Y si el bróker está registrado pero los retiros fallan?",
+       "acceptedAnswer": {"@type": "Answer", "text": "El registro es necesario, no suficiente: incluso las empresas registradas pueden tener quejas, y los clones imitan a las registradas. Si los retiros se bloquean, trátelo como un caso — nuestra guía de problemas de retiro explica las vías de desbloqueo."}},
+      {"@type": "Question",
+       "name": "¿Una licencia offshore vale algo?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Algunos reguladores offshore son genuinos pero débiles en la protección minorista. Si el bróker que le atiende solo tiene licencia offshore mientras le comercializa productos en la UE o Reino Unido, el marketing mismo puede ser ya ilícito — y eso es palanca, documentada en nuestras guías de recuperación."}}
+    ]}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="topbar">
+    <div class="container">
+      <a href="/#contact">Support</a>
+      <a href="/#process">How we work</a>
+      <div class="lang" aria-label="Language"><a href="/es/guia/verificar-licencia-broker/" class="active" lang="es" hreflang="es">ES</a></div>
+    </div>
+  </div>
+  <div class="mainbar">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Forensics Source Group home">
+        <span class="wm">Forensics<br>Source<br>Group<sup>&#174;</sup></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/scam-investigation/">Scam investigation</a>
+        <a href="/hire-a-hacker/">Hire a Hacker</a>
+        <a href="/broker-review/">Broker review</a>
+        <a href="/es/guia/">Guías</a>
+        <a href="/#capabilities">Capabilities</a>
+        <a href="/#who">Who we help</a>
+        <a href="/#process">How we work</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-orange" href="#contact">Send your records</a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+          <svg width="26" height="26" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a><span aria-hidden="true">&#8250;</span><a href="/es/guia/">Guías</a><span aria-hidden="true">&#8250;</span><span>Verificar licencia</span>
+        </nav>
+        <span class="kicker">Verificación paso a paso · Actualizado October 2026</span>
+        <h1>Verificar licencia bróker: la verificación de 5 minutos paso a paso</h1>
+        <p class="lead">La única comprobación que filtra la mayoría del fraude de trading toma cinco minutos y no cuesta nada: el registro. Así se hace correctamente — en el registro correcto, con la entidad exacta, con las comprobaciones cruzadas que desenmascaran clones.</p>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Por qué ganan los registros</span>
+        <h2>La comprobación que los estafadores no pueden falsificar</h2>
+      </div>
+      <ul class="checklist">
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li><</li>
+        <li>p</li>
+        <li>></li>
+        <li>T</li>
+        <li>o</li>
+        <li>d</li>
+        <li>o</li>
+        <li> </li>
+        <li>b</li>
+        <li>r</li>
+        <li>ó</li>
+        <li>k</li>
+        <li>e</li>
+        <li>r</li>
+        <li> </li>
+        <li>l</li>
+        <li>e</li>
+        <li>g</li>
+        <li>í</li>
+        <li>t</li>
+        <li>i</li>
+        <li>m</li>
+        <li>o</li>
+        <li> </li>
+        <li>f</li>
+        <li>i</li>
+        <li>g</li>
+        <li>u</li>
+        <li>r</li>
+        <li>a</li>
+        <li> </li>
+        <li>e</li>
+        <li>n</li>
+        <li> </li>
+        <li>u</li>
+        <li>n</li>
+        <li> </li>
+        <li>r</li>
+        <li>e</li>
+        <li>g</li>
+        <li>i</li>
+        <li>s</li>
+        <li>t</li>
+        <li>r</li>
+        <li>o</li>
+        <li> </li>
+        <li>p</li>
+        <li>ú</li>
+        <li>b</li>
+        <li>l</li>
+        <li>i</li>
+        <li>c</li>
+        <li>o</li>
+        <li> </li>
+        <li>o</li>
+        <li>p</li>
+        <li>e</li>
+        <li>r</li>
+        <li>a</li>
+        <li>d</li>
+        <li>o</li>
+        <li> </li>
+        <li>p</li>
+        <li>o</li>
+        <li>r</li>
+        <li> </li>
+        <li>s</li>
+        <li>u</li>
+        <li> </li>
+        <li>r</li>
+        <li>e</li>
+        <li>g</li>
+        <li>u</li>
+        <li>l</li>
+        <li>a</li>
+        <li>d</li>
+        <li>o</li>
+        <li>r</li>
+        <li> </li>
+        <li>—</li>
+        <li> </li>
+        <li>y</li>
+        <li> </li>
+        <li>e</li>
+        <li>l</li>
+        <li> </li>
+        <li>r</li>
+        <li>e</li>
+        <li>g</li>
+        <li>i</li>
+        <li>s</li>
+        <li>t</li>
+        <li>r</li>
+        <li>o</li>
+        <li>,</li>
+        <li> </li>
+        <li>n</li>
+        <li>o</li>
+        <li> </li>
+        <li>e</li>
+        <li>l</li>
+        <li> </li>
+        <li>s</li>
+        <li>i</li>
+        <li>t</li>
+        <li>i</li>
+        <li>o</li>
+        <li> </li>
+        <li>d</li>
+        <li>e</li>
+        <li>l</li>
+        <li> </li>
+        <li>b</li>
+        <li>r</li>
+        <li>ó</li>
+        <li>k</li>
+        <li>e</li>
+        <li>r</li>
+        <li>,</li>
+        <li> </li>
+        <li>e</li>
+        <li>s</li>
+        <li> </li>
+        <li>l</li>
+        <li>a</li>
+        <li> </li>
+        <li>f</li>
+        <li>u</li>
+        <li>e</li>
+        <li>n</li>
+        <li>t</li>
+        <li>e</li>
+        <li> </li>
+        <li>d</li>
+        <li>e</li>
+        <li> </li>
+        <li>v</li>
+        <li>e</li>
+        <li>r</li>
+        <li>d</li>
+        <li>a</li>
+        <li>d</li>
+        <li>.</li>
+        <li> </li>
+        <li>U</li>
+        <li>n</li>
+        <li>a</li>
+        <li> </li>
+        <li>m</li>
+        <li>a</li>
+        <li>r</li>
+        <li>c</li>
+        <li>a</li>
+        <li> </li>
+        <li>c</li>
+        <li>l</li>
+        <li>o</li>
+        <li>n</li>
+        <li>a</li>
+        <li>d</li>
+        <li>a</li>
+        <li> </li>
+        <li>p</li>
+        <li>u</li>
+        <li>e</li>
+        <li>d</li>
+        <li>e</li>
+        <li> </li>
+        <li>c</li>
+        <li>o</li>
+        <li>p</li>
+        <li>i</li>
+        <li>a</li>
+        <li>r</li>
+        <li> </li>
+        <li>e</li>
+        <li>l</li>
+        <li> </li>
+        <li>l</li>
+        <li>o</li>
+        <li>g</li>
+        <li>o</li>
+        <li>,</li>
+        <li> </li>
+        <li>e</li>
+        <li>l</li>
+        <li> </li>
+        <li>n</li>
+        <li>ú</li>
+        <li>m</li>
+        <li>e</li>
+        <li>r</li>
+        <li>o</li>
+        <li> </li>
+        <li>d</li>
+        <li>e</li>
+        <li> </li>
+        <li>l</li>
+        <li>i</li>
+        <li>c</li>
+        <li>e</li>
+        <li>n</li>
+        <li>c</li>
+        <li>i</li>
+        <li>a</li>
+        <li> </li>
+        <li>y</li>
+        <li> </li>
+        <li>l</li>
+        <li>a</li>
+        <li> </li>
+        <li>f</li>
+        <li>o</li>
+        <li>t</li>
+        <li>o</li>
+        <li> </li>
+        <li>d</li>
+        <li>e</li>
+        <li> </li>
+        <li>l</li>
+        <li>a</li>
+        <li> </li>
+        <li>o</li>
+        <li>f</li>
+        <li>i</li>
+        <li>c</li>
+        <li>i</li>
+        <li>n</li>
+        <li>a</li>
+        <li>;</li>
+        <li> </li>
+        <li>n</li>
+        <li>o</li>
+        <li> </li>
+        <li>p</li>
+        <li>u</li>
+        <li>e</li>
+        <li>d</li>
+        <li>e</li>
+        <li> </li>
+        <li>i</li>
+        <li>n</li>
+        <li>s</li>
+        <li>e</li>
+        <li>r</li>
+        <li>t</li>
+        <li>a</li>
+        <li>r</li>
+        <li>s</li>
+        <li>e</li>
+        <li> </li>
+        <li>e</li>
+        <li>n</li>
+        <li> </li>
+        <li>l</li>
+        <li>a</li>
+        <li> </li>
+        <li>b</li>
+        <li>a</li>
+        <li>s</li>
+        <li>e</li>
+        <li> </li>
+        <li>d</li>
+        <li>e</li>
+        <li> </li>
+        <li>d</li>
+        <li>a</li>
+        <li>t</li>
+        <li>o</li>
+        <li>s</li>
+        <li> </li>
+        <li>d</li>
+        <li>e</li>
+        <li> </li>
+        <li>l</li>
+        <li>a</li>
+        <li> </li>
+        <li>C</li>
+        <li>N</li>
+        <li>M</li>
+        <li>V</li>
+        <li>,</li>
+        <li> </li>
+        <li>C</li>
+        <li>y</li>
+        <li>S</li>
+        <li>E</li>
+        <li>C</li>
+        <li>,</li>
+        <li> </li>
+        <li>F</li>
+        <li>C</li>
+        <li>A</li>
+        <li>,</li>
+        <li> </li>
+        <li>C</li>
+        <li>O</li>
+        <li>N</li>
+        <li>S</li>
+        <li>O</li>
+        <li>B</li>
+        <li> </li>
+        <li>o</li>
+        <li> </li>
+        <li>B</li>
+        <li>a</li>
+        <li>F</li>
+        <li>i</li>
+        <li>n</li>
+        <li>.</li>
+        <li><</li>
+        <li>/</li>
+        <li>p</li>
+        <li>></li>
+        <li>
+</li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+        <li><</li>
+        <li>p</li>
+        <li>></li>
+        <li>L</li>
+        <li>a</li>
+        <li> </li>
+        <li>c</li>
+        <li>o</li>
+        <li>m</li>
+        <li>p</li>
+        <li>r</li>
+        <li>o</li>
+        <li>b</li>
+        <li>a</li>
+        <li>c</li>
+        <li>i</li>
+        <li>ó</li>
+        <li>n</li>
+        <li> </li>
+        <li>t</li>
+        <li>i</li>
+        <li>e</li>
+        <li>n</li>
+        <li>e</li>
+        <li> </li>
+        <li>t</li>
+        <li>r</li>
+        <li>e</li>
+        <li>s</li>
+        <li> </li>
+        <li>n</li>
+        <li>i</li>
+        <li>v</li>
+        <li>e</li>
+        <li>l</li>
+        <li>e</li>
+        <li>s</li>
+        <li>:</li>
+        <li> </li>
+        <li>l</li>
+        <li>a</li>
+        <li> </li>
+        <li>e</li>
+        <li>n</li>
+        <li>t</li>
+        <li>i</li>
+        <li>d</li>
+        <li>a</li>
+        <li>d</li>
+        <li> </li>
+        <li>e</li>
+        <li>s</li>
+        <li>t</li>
+        <li>á</li>
+        <li> </li>
+        <li>r</li>
+        <li>e</li>
+        <li>g</li>
+        <li>i</li>
+        <li>s</li>
+        <li>t</li>
+        <li>r</li>
+        <li>a</li>
+        <li>d</li>
+        <li>a</li>
+        <li>;</li>
+        <li> </li>
+        <li>l</li>
+        <li>o</li>
+        <li>s</li>
+        <li> </li>
+        <li>d</li>
+        <li>e</li>
+        <li>t</li>
+        <li>a</li>
+        <li>l</li>
+        <li>l</li>
+        <li>e</li>
+        <li>s</li>
+        <li> </li>
+        <li>c</li>
+        <li>o</li>
+        <li>i</li>
+        <li>n</li>
+        <li>c</li>
+        <li>i</li>
+        <li>d</li>
+        <li>e</li>
+        <li>n</li>
+        <li> </li>
+        <li>e</li>
+        <li>x</li>
+        <li>a</li>
+        <li>c</li>
+        <li>t</li>
+        <li>a</li>
+        <li>m</li>
+        <li>e</li>
+        <li>n</li>
+        <li>t</li>
+        <li>e</li>
+        <li> </li>
+        <li>(</li>
+        <li>n</li>
+        <li>o</li>
+        <li>m</li>
+        <li>b</li>
+        <li>r</li>
+        <li>e</li>
+        <li>,</li>
+        <li> </li>
+        <li>n</li>
+        <li>ú</li>
+        <li>m</li>
+        <li>e</li>
+        <li>r</li>
+        <li>o</li>
+        <li>,</li>
+        <li> </li>
+        <li>d</li>
+        <li>o</li>
+        <li>m</li>
+        <li>i</li>
+        <li>n</li>
+        <li>i</li>
+        <li>o</li>
+        <li>)</li>
+        <li>;</li>
+        <li> </li>
+        <li>y</li>
+        <li> </li>
+        <li>l</li>
+        <li>a</li>
+        <li> </li>
+        <li>e</li>
+        <li>n</li>
+        <li>t</li>
+        <li>i</li>
+        <li>d</li>
+        <li>a</li>
+        <li>d</li>
+        <li> </li>
+        <li>r</li>
+        <li>e</li>
+        <li>g</li>
+        <li>i</li>
+        <li>s</li>
+        <li>t</li>
+        <li>r</li>
+        <li>a</li>
+        <li>d</li>
+        <li>a</li>
+        <li> </li>
+        <li>p</li>
+        <li>u</li>
+        <li>e</li>
+        <li>d</li>
+        <li>e</li>
+        <li> </li>
+        <li>r</li>
+        <li>e</li>
+        <li>a</li>
+        <li>l</li>
+        <li>m</li>
+        <li>e</li>
+        <li>n</li>
+        <li>t</li>
+        <li>e</li>
+        <li> </li>
+        <li>o</li>
+        <li>f</li>
+        <li>r</li>
+        <li>e</li>
+        <li>c</li>
+        <li>e</li>
+        <li>r</li>
+        <li> </li>
+        <li>s</li>
+        <li>u</li>
+        <li> </li>
+        <li>p</li>
+        <li>r</li>
+        <li>o</li>
+        <li>d</li>
+        <li>u</li>
+        <li>c</li>
+        <li>t</li>
+        <li>o</li>
+        <li> </li>
+        <li>e</li>
+        <li>n</li>
+        <li> </li>
+        <li>s</li>
+        <li>u</li>
+        <li> </li>
+        <li>p</li>
+        <li>a</li>
+        <li>í</li>
+        <li>s</li>
+        <li>.</li>
+        <li> </li>
+        <li>L</li>
+        <li>a</li>
+        <li>s</li>
+        <li> </li>
+        <li>e</li>
+        <li>s</li>
+        <li>t</li>
+        <li>a</li>
+        <li>f</li>
+        <li>a</li>
+        <li>s</li>
+        <li> </li>
+        <li>v</li>
+        <li>i</li>
+        <li>v</li>
+        <li>e</li>
+        <li>n</li>
+        <li> </li>
+        <li>e</li>
+        <li>n</li>
+        <li> </li>
+        <li>l</li>
+        <li>o</li>
+        <li>s</li>
+        <li> </li>
+        <li>h</li>
+        <li>u</li>
+        <li>e</li>
+        <li>c</li>
+        <li>o</li>
+        <li>s</li>
+        <li> </li>
+        <li>e</li>
+        <li>n</li>
+        <li>t</li>
+        <li>r</li>
+        <li>e</li>
+        <li> </li>
+        <li>e</li>
+        <li>s</li>
+        <li>o</li>
+        <li>s</li>
+        <li> </li>
+        <li>n</li>
+        <li>i</li>
+        <li>v</li>
+        <li>e</li>
+        <li>l</li>
+        <li>e</li>
+        <li>s</li>
+        <li>.</li>
+        <li><</li>
+        <li>/</li>
+        <li>p</li>
+        <li>></li>
+      </ul>
+    </div>
+  </section>
+  <section class="band">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Paso a paso</span>
+        <h2>La verificación de cinco minutos</h2>
+      </div>
+      <p><strong>1. Hallar el nombre real.</strong> En los documentos legales del bróker — no en el logo de la portada. Anote la entidad jurídica exacta y el número de licencia si aparece.</p>
+      <p><strong>2. Abrir el registro correcto.</strong> CNMV (España), CySEC (Chipre), FCA (Reino Unido), CONSOB (Italia), BaFin (Alemania) — en parte buscables en inglés mediante los enlaces de ESMA.</p>
+      <p><strong>3. Cotejar dos de tres.</strong> El nombre de la entidad y el número de licencia deben coincidir con el registro; el dominio del sitio debería coincidir con el dominio registrado.</p>
+      <p><strong>4. Revisar los permisos.</strong> Los permisos de 'empresa de inversión' difieren del mero estatus de intermediación — un clone cita a menudo el número de una empresa real con permisos distintos.</p>
+      <p><strong>5. Buscar en las listas de advertencia.</strong> Busque el nombre en la lista de advertencias de su regulador — los clones figuran ahí antes de ser cerrados.</p>
+    </div>
+  </section>
+  <section class="band">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Señales de estafa bróker</span>
+        <h2>Si alguna comprobación falla, considere esto confirmado</h2>
+      </div>
+      <ul class="checklist">
+        <li><b>Número de licencia en el sitio, ausente en el registro.</b>Copiado de una empresa real — el movimiento clásico del clon.</li>
+        <li><b>Nombre de la entidad registrada difiere en una palabra.</b>Las fachadas imitan empresas reales ('Markets' vs 'Markets Ltd') para tomar prestada su licencia.</li>
+        <li><b>Dominio registrado hace semanas, décadas de historia reclamadas.</b>La edad del dominio es pública y no se puede photoshopear.</li>
+        <li><b>El regulador lista la marca o su 'clon' en advertencias.</b>Las advertencias significan que el regulador ya tiene denuncias de víctimas — vaya, y pruebe el retiro antes.</li>
+        <li><b>Presión para saltarse los pasos de verificación.</b>Quien le empuja más allá del registro le está diciendo lo que el registro mostraría.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="band">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Si las comprobaciones fallan</span>
+        <h2>De la verificación a la acción</h2>
+      </div>
+      <h3>No deposite 'para probar'</h3>
+      <p>Una plataforma que falla la verificación no debe recibir nada — el primer depósito es el dinero más barato que la estafa jamás le tomará.</p>
+      <h3>Retire lo que quede, documente todo</h3>
+      <p>Si ya depositó, intente el retiro ahora, capture cada paso y preserve todos los registros antes de que la cuenta sea cerrada.</p>
+      <h3>Denuncie y haga evaluar su caso</h3>
+      <p>Denuncie la entidad ante su regulador (alimenta las listas que protegen a la próxima víctima) y haga evaluar su caso mientras las ventanas bancarias están abiertas.</p>
+    </div>
+  </section>
+  <!-- RELATED -->
+  <section class="band-soft"><div class="container">
+    <p style="color:var(--muted);font-size:16.5px;max-width:80ch">Las entidades que nuestros revisores ya verificaron línea por línea están en el <a href="/broker-review/">archivo de reseñas forenses</a>; si la licencia falla, la <a href="/es/guia/estafa-forex/">guía de estafa forex</a> explica lo que está viendo — y <a href="/scam-investigation/">nuestro servicio de investigación</a> toma el relevo cuando la verificación se convierte en caso.</p>
+  </div></section>
+  <!-- RELATED REVIEWS -->
+  <section><div class="container">
+    <p style="color:var(--muted);font-size:16.5px;max-width:80ch">Casos concretos de nuestro archivo de reseñas forenses: <a href="/broker-review/etoro-review/">un bróker registrado cuyos datos de licencia verificamos</a> · <a href="/broker-review/coinbase-review/">un exchange cuyo registro cotejamos con el registro oficial</a> · <a href="/broker-review/xm-review/">un bróker cuya entidad y permisos cotejamos con el regulador</a></p>
+  </div></section>
+  <!-- FAQ -->
+  <section class="band-soft">
+    <div class="container">
+      <div class="section-head center">
+        <span class="kicker">FAQ</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>¿Qué registro debo comprobar?</summary>
+          <p>El registro del regulador donde el bróker declara su licencia: CNMV para España, CySEC para Chipre, FCA para Reino Unido, CONSOB para Italia, BaFin para Alemania. Si el bróker declara 'regulación europea', verifique la entidad exacta y el país — el pasaporte europeo es real, pero los clones abusan de la palabra.</p>
+        </details>
+        <details>
+          <summary>¿Y si el bróker está registrado pero los retiros fallan?</summary>
+          <p>El registro es necesario, no suficiente: incluso las empresas registradas pueden tener quejas, y los clones imitan a las registradas. Si los retiros se bloquean, trátelo como un caso — nuestra guía de problemas de retiro explica las vías de desbloqueo.</p>
+        </details>
+        <details>
+          <summary>¿Una licencia offshore vale algo?</summary>
+          <p>Algunos reguladores offshore son genuinos pero débiles en la protección minorista. Si el bróker que le atiende solo tiene licencia offshore mientras le comercializa productos en la UE o Reino Unido, el marketing mismo puede ser ya ilícito — y eso es palanca, documentada en nuestras guías de recuperación.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!-- CLIENT COMMENTS -->
+  <section class="cm-section" id="comments" data-slug="%%CM_SLUG%%" data-broker="%%CM_BROKER%%">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Verified client feedback</span>
+        <h2>Client comments</h2>
+        <p class="cm-honesty">Comments are moderated. We only publish comments from verified clients.</p>
+      </div>
+      <div id="cmList" class="cm-list" aria-live="polite"></div>
+      <form id="cmForm" class="cm-form" action="https://formcarry.com/s/F__X8iSA1z8" method="POST">
+        <div class="row2">
+          <div class="field"><label for="cmName">Name</label><input id="cmName" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="cmEmail">Email</label><input id="cmEmail" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field">
+          <label for="cmText">Comment</label>
+          <textarea id="cmText" name="comment" maxlength="1000" required></textarea>
+          <span class="cm-count"><span id="cmCount">0</span> / 1000</span>
+        </div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Comment — %%CM_BROKER%%">
+        <input type="hidden" name="page_slug" value="%%CM_SLUG%%">
+        <input type="hidden" name="submitted_at" id="cmSubmittedAt" value="">
+        <div style="margin-top:18px"><button type="submit" class="btn btn-blue" id="cmSubmit">Submit comment for moderation</button></div>
+        <div id="cmStatus" class="form-status" role="status" aria-live="polite"></div>
+        <p class="form-note">Your email is never published. Comments appear only after moderation by our team.</p>
+      </form>
+      <div id="cmThanks" class="cm-thanks" hidden>
+        <p>Thank you. Your comment has been submitted for moderation and will appear after review.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-info">
+        <p>Forensics Source Group is not affiliated to this broker. We cannot close an account or confirm a balance. We investigate losses as a cybersecurity company — we do not replace the bank, the card scheme, or the police. Write the date and how you paid.</p>
+        <div class="item">
+          <svg width="24" height="24" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+          <div><strong>Email</strong><span><a href="mailto:info@forensicsourcegroup.com">info@forensicsourcegroup.com</a></span></div>
+        </div>
+        <div class="item">
+          <svg width="24" height="24" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><strong>Office</strong><span>5615 Concord Pike, Wilmington, Delaware 19803, USA</span></div>
+        </div>
+        <div class="item">
+          <svg width="24" height="24" fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>
+          <div><strong>Coverage</strong><span>United States · United Kingdom · European Union · Germany</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="wm">Forensics Source Group<sup>&#174;</sup></span>
+      <p>Cybersecurity, incident response and court-admissible digital forensics for businesses, legal teams and individuals.</p>
+      <p style="margin-top:14px">5615 Concord Pike, Wilmington, Delaware 19803, USA<br>
+      <a href="tel:+17373815959">+1&nbsp;737&nbsp;381&nbsp;5959</a> · <a href="mailto:info@forensicsourcegroup.com">info@forensicsourcegroup.com</a></p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/hire-a-hacker/">Hire a Hacker</a></li>
+        <li><a href="/broker-review/">Broker review</a></li>
+        <li><a href="/#services">Incident response</a></li>
+        <li><a href="/#services">Breach investigation</a></li>
+        <li><a href="/#services">Digital forensics</a></li>
+        <li><a href="/#services">Penetration testing</a></li>
+        <li><a href="/#services">Cyber investigation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reviews</h4>
+      <ul>
+        <li><a href="/broker-review/etoro-review/">eToro review</a></li>
+        <li><a href="/broker-review/">All broker reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#capabilities">Capabilities</a></li>
+        <li><a href="/#who">Who we help</a></li>
+        <li><a href="/#process">How we work</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/de/" hreflang="de">Deutsch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="yr">2026</span> Forensics Source Group&#174;. All rights reserved.</span>
+    <span>United States · United Kingdom · European Union · Germany</span>
+  </div>
+</footer>
+<div class="footer-legal">
+  Forensics Source Group operates lawfully and only on systems, devices and accounts our clients own or are legally authorized to examine. This review is a forensic assessment of publicly observable information as of October 2026; it is not investment advice.
+</div>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="../../../js/form.js"></script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a8db5b1dcccab344b66db76/1k0sorfai';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- SCAM ALERT POPUP -->
+<div id="sgPopup" data-broker="el bróker que está verificando" data-slug="es-guia-verificar-licencia-broker" hidden>
+  <div class="sg-overlay" id="sgOverlay" role="dialog" aria-modal="true" aria-labelledby="sgTitle">
+    <div class="sg-card">
+      <div class="sg-head">
+        <span class="sg-badge">Scam Alert</span>
+        <button class="sg-close" id="sgClose" aria-label="Close">&#10005;</button>
+      </div>
+      <div class="sg-body">
+        <h2 id="sgTitle">Used this platform?</h2>
+        <p class="sg-sub">Forensics Source Group is not affiliated to this broker. We investigate losses as a cybersecurity company. One record opens the file.</p>
+        <ul class="sg-proof">
+          <li>The date, and card, bank, or crypto</li>
+          <li>The name of the person who told you to pay</li>
+          <li>A screenshot of the dashboard, chat, or receipt</li>
+        </ul>
+        <form id="sgForm" action="https://formcarry.com/s/F__X8iSA1z8" method="POST">
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Scam Alert popup — review page">
+          <div class="sg-row">
+            <div class="sg-field"><label for="sgName">Full name</label><input id="sgName" name="name" type="text" autocomplete="name" required></div>
+            <div class="sg-field"><label for="sgEmail">Email</label><input id="sgEmail" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="sg-field"><label for="sgPhone">Your phone, if you want a call</label><input id="sgPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 737 000 0000">
+            <span class="sg-hint">Optional. Include the country code if you want us to call.</span></div>
+          <div class="sg-field"><label for="sgMsg">What happened?</label>
+            <textarea id="sgMsg" name="message" required>I used el bróker que está verificando. Date I paid: . How I paid: . Person who told me to pay: .</textarea></div>
+          <label class="sg-consent"><input type="checkbox" name="consent" required>
+            <span>I consent to Forensics Source Group contacting me about my enquiry.</span></label>
+          <button type="submit" class="sg-btn sg-btn-orange sg-submit">Send the missing records</button>
+          <div id="sgStatus" class="sg-status" role="status" aria-live="polite"></div>
+        </form>
+        <p class="sg-note">Confidential · Reply within one business day · No cost to assess the case</p>
+        <button class="sg-dismiss" id="sgDismiss">No thanks, I'm just researching</button>
+      </div>
+    </div>
+  </div>
+  <button class="sg-fab" id="sgFab">Used this site? Send one record</button>
+</div>
+<script src="../../js/popup.js" defer></script>
+
+<script src="../../../js/comments-data.js" defer></script>
+<script src="../../../js/comments.js" defer></script>
+</body>
+</html>
