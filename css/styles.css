@@ -121,6 +121,7 @@ section{padding:76px 0}
 
 /* Process */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.process-steps{grid-template-columns:1fr;max-width:80ch}
 .step{padding:26px;background:#fff;border:1.5px solid var(--blue-border)}
 .step .n{width:40px;height:40px;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:18px}
 .step h3{margin:0 0 6px;font-size:18px;font-weight:800}
