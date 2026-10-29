@@ -79,6 +79,6 @@
         else{throw 0;}
       })
       .catch(function(){status.className='sg-status err';status.textContent='Something went wrong — please email info@forensicsourcegroup.com.';})
-      .finally(function(){btn.disabled=false;btn.textContent='Send the missing records';});
+      .finally(function(){btn.disabled=false;btn.textContent='Request a consultation';});
   });
 })();
