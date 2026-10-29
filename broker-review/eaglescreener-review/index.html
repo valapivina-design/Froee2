@@ -387,8 +387,18 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
           <div class="sg-field"><label for="sgPhone">Phone number</label><input id="sgPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 737 000 0000">
             <span class="sg-hint">Optional. Include the country code.</span></div>
+          <div class="sg-field"><label for="sgAmount">Amount lost</label>
+            <select id="sgAmount" name="amount_lost">
+              <option value="">Select approximate amount…</option>
+              <option>Under $1,000 / not sure</option>
+              <option>$1,000 to $5,000</option>
+              <option>$5,000 to $25,000</option>
+              <option>$25,000 to $100,000</option>
+              <option>$100,000 or more</option>
+            </select>
+            <span class="sg-hint">Optional. Helps us triage the file.</span></div>
           <div class="sg-field"><label for="sgMsg">What happened?</label>
-            <textarea id="sgMsg" name="message" required>I used Eaglescreener. Date I paid: . How I paid: . Person who told me to pay: .</textarea></div>
+            <textarea id="sgMsg" name="message" required>I used Eaglescreener. Date I paid: . How I paid: . Amount lost: . Person who told me to pay: .</textarea></div>
           <label class="sg-consent"><input type="checkbox" name="consent" required>
             <span>I consent to Forensics Source Group contacting me about my enquiry.</span></label>
           <button type="submit" class="sg-btn sg-btn-orange sg-submit">Send the missing records</button>

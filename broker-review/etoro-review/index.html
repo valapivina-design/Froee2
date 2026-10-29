@@ -719,7 +719,17 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
           <div class="sg-field"><label for="sgPhone">Phone / WhatsApp — include country code</label><input id="sgPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+44 7700 900000" required>
             <span class="sg-hint">Start with “+” and your country code — e.g. +1 (US), +44 (UK), +61 (AU) — or we can’t reach you.</span></div>
-          <div class="sg-field"><label for="sgMsg">What happened?</label>
+                    <div class="sg-field"><label for="sgAmount">Amount lost</label>
+            <select id="sgAmount" name="amount_lost">
+              <option value="">Select approximate amount…</option>
+              <option>Under $1,000 / not sure</option>
+              <option>$1,000 to $5,000</option>
+              <option>$5,000 to $25,000</option>
+              <option>$25,000 to $100,000</option>
+              <option>$100,000 or more</option>
+            </select>
+            <span class="sg-hint">Optional. Helps us triage the file.</span></div>
+<div class="sg-field"><label for="sgMsg">What happened?</label>
             <textarea id="sgMsg" name="message" required>I lost money and want a free case review.</textarea></div>
           <label class="sg-consent"><input type="checkbox" name="consent" required>
             <span>I consent to Forensics Source Group contacting me about my enquiry.</span></label>

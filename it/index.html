@@ -351,7 +351,18 @@
           <div class="field"><label for="company">Azienda / organizzazione (opzionale)</label><input id="company" name="company" type="text" autocomplete="organization"></div>
           <div class="field"><label for="phone">Telefono</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
         </div>
-        <div class="field">
+                <div class="field">
+          <label for="amount_lost">Amount lost (optional)</label>
+          <select id="amount_lost" name="amount_lost">
+            <option value="">Select approximate amount…</option>
+            <option>Under $1,000 / not sure</option>
+            <option>$1,000 to $5,000</option>
+            <option>$5,000 to $25,000</option>
+            <option>$25,000 to $100,000</option>
+            <option>$100,000 or more</option>
+          </select>
+        </div>
+<div class="field">
           <label for="service">Come possiamo aiutarti?</label>
           <select id="service" name="service">
             <option value="">Seleziona un servizio…</option>

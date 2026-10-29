@@ -21,7 +21,7 @@
       msg=form.querySelector('#sgMsg');
   if(h2em) h2em.textContent=broker;
   if(subject) subject.value='Scam Alert popup — '+broker+' review page';
-  if(msg) msg.value='I used '+broker+'. Date I paid: . How I paid: . Person who told me to pay: .';
+  if(msg) msg.value='I used '+broker+'. Date I paid: . How I paid: . Amount lost: . Person who told me to pay: .';
   wrap.removeAttribute('hidden');
 
   var h1=document.querySelector('h1');
