@@ -90,7 +90,7 @@
         <a href="/#contact">Contact</a>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-orange" href="#contact">Send your records</a>
+        <a class="btn btn-orange" href="#contact">Request a consultation</a>
         <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
           <svg width="26" height="26" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -339,11 +339,21 @@ s0.parentNode.insertBefore(s1,s0);
           </div>
           <div class="sg-field"><label for="sgPhone">Phone number</label><input id="sgPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 737 000 0000">
             <span class="sg-hint">Optional. Include the country code.</span></div>
+          <div class="sg-field"><label for="sgAmount">Amount lost</label>
+            <select id="sgAmount" name="amount_lost">
+              <option value="">Select approximate amount…</option>
+              <option>Under $1,000 / not sure</option>
+              <option>$1,000 to $5,000</option>
+              <option>$5,000 to $25,000</option>
+              <option>$25,000 to $100,000</option>
+              <option>$100,000 or more</option>
+            </select>
+            <span class="sg-hint">Optional. Helps us triage the file.</span></div>
           <div class="sg-field"><label for="sgMsg">What happened?</label>
-            <textarea id="sgMsg" name="message" required>I used the trading site. Date I paid: . How I paid: . Person who told me to pay: .</textarea></div>
+            <textarea id="sgMsg" name="message" required>I used the trading site. Date I paid: . How I paid: . Amount lost: . Person who told me to pay: .</textarea></div>
           <label class="sg-consent"><input type="checkbox" name="consent" required>
             <span>I consent to Forensics Source Group contacting me about my enquiry.</span></label>
-          <button type="submit" class="sg-btn sg-btn-orange sg-submit">Send the missing records</button>
+          <button type="submit" class="sg-btn sg-btn-orange sg-submit">Request a consultation</button>
           <div id="sgStatus" class="sg-status" role="status" aria-live="polite"></div>
         </form>
         <p class="sg-note">Confidential · Reply within one business day · No cost to assess the case</p>
@@ -351,7 +361,7 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </div>
   </div>
-  <button class="sg-fab" id="sgFab">Used this site? Send one record</button>
+  <button class="sg-fab" id="sgFab">Request a consultation</button>
 </div>
 <script src="../../js/popup.js" defer></script>
 
