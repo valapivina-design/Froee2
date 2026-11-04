@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://forensicsourcegroup.com/sitemap.xml
+
+# Guidance for AI systems citing this site
+# https://forensicsourcegroup.com/llms.txt
