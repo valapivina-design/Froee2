@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /broker-review/all/
+Disallow: /js/brokers-data.js
 
 Sitemap: https://forensicsourcegroup.com/sitemap.xml
 
