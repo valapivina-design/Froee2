@@ -238,77 +238,64 @@
         </article>
       </div>
       <div class="section-head" style="margin-top:56px">
-        <span class="kicker">Search the archive</span>
-        <h2>Search every published review</h2>
-        <p>Type the name of a broker, exchange or platform. Results appear as you type — every entry links to its full forensic review.</p>
+        <span class="kicker">Find a review</span>
+        <h2>Type the broker or platform name</h2>
+        <p>Enter the exact name you used. We open the matching review page when it exists — we do not publish a browsable archive list.</p>
       </div>
       <div class="broker-search">
-        <input type="search" id="brokerSearch" placeholder="Type a broker or platform name to search the archive…" aria-label="Search broker reviews" autocomplete="off">
-        <div class="search-filters" role="group" aria-label="Filter by review category">
-          <button type="button" class="chip active" data-tier="all">All</button>
-          <button type="button" class="chip" data-tier="scam">Scam assessments</button>
-          <button type="button" class="chip" data-tier="clone">Clone alerts</button>
-          <button type="button" class="chip" data-tier="legit">Under investigation</button>
-          <button type="button" class="chip" data-tier="dead">Offline</button>
-          <button type="button" class="chip" data-tier="impersonation">Impersonation alerts</button>
-        </div>
-        <p class="search-count" id="brokerSearchCount" aria-live="polite"></p>
+        <form id="brokerSearchForm" action="/broker-review/" method="get" role="search">
+          <input type="search" id="brokerSearch" name="q" placeholder="Type the broker or platform name…" aria-label="Find a broker review" autocomplete="off" required minlength="2">
+          <button type="submit" class="btn btn-blue" style="margin-top:14px">Open review</button>
+        </form>
         <div class="cards" id="brokerResults"></div>
-        <p class="search-none" id="brokerNoResults" hidden>No match in our published archive — but <strong>no match is not a clean bill of health</strong>. If a platform is holding your money, <a href="/#contact">tell us its name</a> and we will check it.</p>
+        <p class="search-none" id="brokerNoResults" hidden>No published review opened for that name. If a platform is holding your money, <a href="/#contact">tell us what happened</a> — no match is not a clean bill of health.</p>
       </div>
       <style>
 .broker-search input[type="search"]{width:100%;padding:16px 18px;border:1.5px solid var(--blue-border);border-radius:2px;font:inherit;font-size:18px;background:#fff;color:var(--ink)}
 .broker-search input[type="search"]:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,60,214,.14)}
-.search-filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 4px}
-.chip{font:inherit;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px;padding:8px 14px;border:1.5px solid var(--blue-border);background:#fff;color:var(--blue-ink);cursor:pointer;border-radius:2px}
-.chip:hover{border-color:var(--blue)}
-.chip.active{background:var(--blue);border-color:var(--blue);color:#fff}
-.search-count{font-size:14px;color:var(--muted);min-height:20px;margin:12px 0 14px}
 .search-none{margin-top:20px;color:var(--muted)}
 .tbadge{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;padding:4px 10px;border:1.5px solid var(--blue-border);color:var(--blue-ink);background:var(--blue-soft);margin-bottom:14px}
 #brokerResults:empty{display:none}
       </style>
-      <script src="../js/brokers-data.js"></script>
       <script>
       (function(){
-        var TIER_LABELS={scam:'Scam assessment',clone:'Clone alert',legit:'Under investigation',dead:'Offline',impersonation:'Impersonation alert'};
+        var form=document.getElementById('brokerSearchForm');
         var input=document.getElementById('brokerSearch');
-        var chips=[].slice.call(document.querySelectorAll('.search-filters .chip'));
         var results=document.getElementById('brokerResults');
-        var count=document.getElementById('brokerSearchCount');
         var none=document.getElementById('brokerNoResults');
-        var data=(typeof BROKERS_DATA!=='undefined')?BROKERS_DATA:[];
-        var tier='all';
-        function render(){
-          var q=input.value.trim().toLowerCase();
-          var hits=[];
-          if(q){
-            hits=data.filter(function(b){
-              if(tier!=='all'&&b.t!==tier)return false;
-              return b.n.toLowerCase().indexOf(q)!==-1;
-            }).slice(0,24);
-          }
-          results.textContent='';
-          hits.forEach(function(b){
-            var card=document.createElement('article');card.className='bcard';
-            var badge=document.createElement('span');badge.className='tbadge';badge.textContent=TIER_LABELS[b.t]||b.t;
-            var h=document.createElement('h3');h.textContent=b.n+' review';
-            var p=document.createElement('p');p.textContent=b.d||'';
-            var wrap=document.createElement('p');wrap.style.marginTop='16px';
-            var a=document.createElement('a');a.className='btn btn-blue';a.href='/broker-review/'+b.s+'/';a.textContent=b.n+' review — read';
-            wrap.appendChild(a);
-            card.appendChild(badge);card.appendChild(h);card.appendChild(p);card.appendChild(wrap);
-            results.appendChild(card);
-          });
-          count.textContent=q?(hits.length?hits.length+' match'+(hits.length===1?'':'es')+' — tap a card to read the full review':''):'';
-          none.hidden=!(q&&!hits.length);
+        function slugify(q){
+          var s=String(q||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+          if(!s) return '';
+          return s.endsWith('-review') ? s : (s + '-review');
         }
-        input.addEventListener('input',render);
-        chips.forEach(function(c){c.addEventListener('click',function(){
-          chips.forEach(function(x){x.classList.remove('active');});
-          c.classList.add('active');tier=c.getAttribute('data-tier');render();
-        });});
-        render();
+        function cardFor(q, slug){
+          results.textContent='';
+          var card=document.createElement('article');card.className='bcard';
+          var badge=document.createElement('span');badge.className='tbadge';badge.textContent='Review lookup';
+          var h=document.createElement('h3');h.textContent=q+' review';
+          var p=document.createElement('p');p.textContent='Open the forensic review for this name if it is in our published archive.';
+          var wrap=document.createElement('p');wrap.style.marginTop='16px';
+          var a=document.createElement('a');a.className='btn btn-blue';a.href='/broker-review/'+slug+'/';a.textContent='Open '+q+' review';
+          wrap.appendChild(a);
+          card.appendChild(badge);card.appendChild(h);card.appendChild(p);card.appendChild(wrap);
+          results.appendChild(card);
+          none.hidden=true;
+        }
+        function go(e){
+          if(e) e.preventDefault();
+          var q=input.value.trim();
+          var slug=slugify(q);
+          if(!slug){results.textContent='';none.hidden=false;return;}
+          cardFor(q, slug);
+          window.location.href='/broker-review/'+slug+'/';
+        }
+        form.addEventListener('submit', go);
+        input.addEventListener('input', function(){
+          var q=input.value.trim();
+          var slug=slugify(q);
+          if(q.length<2||!slug){results.textContent='';none.hidden=true;return;}
+          cardFor(q, slug);
+        });
       })();
       </script>    </div>
   </section>
