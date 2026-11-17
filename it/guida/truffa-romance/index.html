@@ -969,53 +969,53 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 
 <!-- SCAM ALERT POPUP -->
-<div id="sgPopup" data-broker="chi vi ha contattato" data-slug="it-guida-truffa-romance" hidden>
+<div id="sgPopup" data-lang="it" data-broker="chi vi ha contattato" data-slug="it-guida-truffa-romance" hidden>
   <div class="sg-overlay" id="sgOverlay" role="dialog" aria-modal="true" aria-labelledby="sgTitle">
     <div class="sg-card">
       <div class="sg-head">
-        <span class="sg-badge">Scam Alert</span>
-        <button class="sg-close" id="sgClose" aria-label="Close">&#10005;</button>
+        <span class="sg-badge">Avviso truffa</span>
+        <button class="sg-close" id="sgClose" aria-label="Chiudi">&#10005;</button>
       </div>
       <div class="sg-body">
-        <h2 id="sgTitle">Used this platform?</h2>
-        <p class="sg-sub">Forensics Source Group is not affiliated to this broker. We investigate losses as a cybersecurity company. One record opens the file.</p>
+        <h2 id="sgTitle">Ha usato questa piattaforma?</h2>
+        <p class="sg-sub">Forensics Source Group non è affiliato a questo broker. Indaghiamo le perdite come società di cybersecurity. Un dato apre il fascicolo.</p>
         <ul class="sg-proof">
-          <li>The date, and card, bank, or crypto</li>
-          <li>The name of the person who told you to pay</li>
-          <li>A screenshot of the dashboard, chat, or receipt</li>
+          <li>La data e se carta, banca o crypto</li>
+          <li>Il nome di chi le ha detto di pagare</li>
+          <li>Uno screenshot di dashboard, chat o ricevuta</li>
         </ul>
         <form id="sgForm" action="https://formcarry.com/s/F__X8iSA1z8" method="POST">
           <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <input type="hidden" name="_subject" value="Scam Alert popup — review page">
+          <input type="hidden" name="_subject" value="Avviso truffa — chi vi ha contattato">
           <div class="sg-row">
-            <div class="sg-field"><label for="sgName">Full name</label><input id="sgName" name="name" type="text" autocomplete="name" required></div>
+            <div class="sg-field"><label for="sgName">Nome e cognome</label><input id="sgName" name="name" type="text" autocomplete="name" required></div>
             <div class="sg-field"><label for="sgEmail">Email</label><input id="sgEmail" name="email" type="email" autocomplete="email" required></div>
           </div>
-          <div class="sg-field"><label for="sgPhone">Phone number</label><input id="sgPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 737 000 0000">
-            <span class="sg-hint">Optional. Include the country code.</span></div>
-          <div class="sg-field"><label for="sgAmount">Amount lost</label>
+          <div class="sg-field"><label for="sgPhone">Telefono</label><input id="sgPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+1 737 000 0000">
+            <span class="sg-hint">Facoltativo. Includa il prefisso internazionale.</span></div>
+          <div class="sg-field"><label for="sgAmount">Importo perso</label>
             <select id="sgAmount" name="amount_lost">
-              <option value="">Select approximate amount…</option>
-              <option>Under $1,000 / not sure</option>
-              <option>$1,000 to $5,000</option>
-              <option>$5,000 to $25,000</option>
-              <option>$25,000 to $100,000</option>
-              <option>$100,000 or more</option>
+              <option value="">Selezioni un importo approssimativo…</option>
+              <option>Sotto 1.000 $ / non so</option>
+              <option>Da 1.000 a 5.000 $</option>
+              <option>Da 5.000 a 25.000 $</option>
+              <option>Da 25.000 a 100.000 $</option>
+              <option>100.000 $ o più</option>
             </select>
-            <span class="sg-hint">Optional. Helps us triage the file.</span></div>
-          <div class="sg-field"><label for="sgMsg">What happened?</label>
-            <textarea id="sgMsg" name="message" required>I used chi vi ha contattato. Date I paid: . How I paid: . Amount lost: . Person who told me to pay: .</textarea></div>
+            <span class="sg-hint">Facoltativo. Aiuta a valutare il caso.</span></div>
+          <div class="sg-field"><label for="sgMsg">Cosa è successo?</label>
+            <textarea id="sgMsg" name="message" required>Ho usato chi vi ha contattato. Data del pagamento: . Come ho pagato: . Importo perso: . Persona che mi ha detto di pagare: .</textarea></div>
           <label class="sg-consent"><input type="checkbox" name="consent" required>
-            <span>I consent to Forensics Source Group contacting me about my enquiry.</span></label>
-          <button type="submit" class="sg-btn sg-btn-orange sg-submit">Request a consultation</button>
+            <span>Acconsento che Forensics Source Group mi contatti in merito alla richiesta.</span></label>
+          <button type="submit" class="sg-btn sg-btn-orange sg-submit">Richiedi una consulenza</button>
           <div id="sgStatus" class="sg-status" role="status" aria-live="polite"></div>
         </form>
-        <p class="sg-note">Confidential · Reply within one business day · No cost to assess the case</p>
-        <button class="sg-dismiss" id="sgDismiss">No thanks, I'm just researching</button>
+        <p class="sg-note">Riservato · Risposta entro un giorno lavorativo · La consultazione è gratuita</p>
+        <button class="sg-dismiss" id="sgDismiss">No grazie, sto solo informandomi</button>
       </div>
     </div>
   </div>
-  <button class="sg-fab" id="sgFab">Request a consultation</button>
+  <button class="sg-fab" id="sgFab">Richiedi una consulenza</button>
 </div>
 <script src="../../js/popup.js" defer></script>
 
