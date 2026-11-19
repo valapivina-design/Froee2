@@ -40,6 +40,14 @@
       sending:'Invio…', sent:'Ricevuto — la contatteremo entro un giorno lavorativo.',
       fail:'Qualcosa è andato storto — scriva a info@forensicsourcegroup.com.',
       submit:'Richiedi una consulenza'
+    },
+    ar:{
+      subject:'تنبيه — '+broker,
+      msg:'استخدمت '+broker+'. تاريخ الدفع: . طريقة الدفع: . المبلغ: . الشخص الذي طلب الدفع: .',
+      phone:'أضف رمز الدولة — ابدأ بـ “+”، مثل +966.',
+      sending:'جارٍ الإرسال…', sent:'وصل الطلب — سنتواصل خلال يوم عمل.',
+      fail:'حدث خطأ — راسل info@forensicsourcegroup.com.',
+      submit:'اطلب استشارة'
     }
   };
   var t=I18N[lang]||I18N.en;
