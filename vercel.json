@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/hire-a-hacker", "destination": "/hireahacker", "permanent": true },
+    { "source": "/hire-a-hacker/", "destination": "/hireahacker/", "permanent": true },
+    { "source": "/hire-a-hacker.html", "destination": "/hireahacker/", "permanent": true }
+  ]
+}
